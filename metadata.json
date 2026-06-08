@@ -1,0 +1,8 @@
+{
+  "name": "Greenhouse - Rural Utility Cost",
+  "description": "Greenhouse economics and operations hub for controlled-environment agriculture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
