@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { TrendingUp, RefreshCw } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { useCalculationHistory } from "@/context/CalculationHistoryContext";
 
 export function ROICalculator() {
-  const [initialInvestment, setInitialInvestment] = useState<number>(100000);
-  const [annualRevenue, setAnnualRevenue] = useState<number>(50000);
-  const [operatingExpenses, setOperatingExpenses] = useState<number>(20000);
+  const [initialInvestment, setInitialInvestment] = useCalculationHistory<number>("roiCalc", "initialInvestment", 100000);
+  const [annualRevenue, setAnnualRevenue] = useCalculationHistory<number>("roiCalc", "annualRevenue", 50000);
+  const [operatingExpenses, setOperatingExpenses] = useCalculationHistory<number>("roiCalc", "operatingExpenses", 20000);
 
   const annualCashFlow = annualRevenue - operatingExpenses;
   const paybackPeriod = annualCashFlow > 0 ? initialInvestment / annualCashFlow : 0;

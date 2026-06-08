@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { GitCompare } from "lucide-react";
+import { useCalculationHistory } from "@/context/CalculationHistoryContext";
 
 type Scenario = {
   name: string;
@@ -10,7 +11,7 @@ type Scenario = {
 };
 
 export function ScenarioCompare() {
-  const [s1, setS1] = useState<Scenario>({
+  const [s1, setS1] = useCalculationHistory<Scenario>("scenarioCompare", "s1", {
     name: "High Tunnel Veggies",
     area: 5000,
     capexPsf: 6,
@@ -18,7 +19,7 @@ export function ScenarioCompare() {
     revenuePsf: 8,
   });
 
-  const [s2, setS2] = useState<Scenario>({
+  const [s2, setS2] = useCalculationHistory<Scenario>("scenarioCompare", "s2", {
     name: "Glass Hydroponic",
     area: 5000,
     capexPsf: 45,

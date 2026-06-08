@@ -4,6 +4,7 @@
  */
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CalculationHistoryProvider } from "./context/CalculationHistoryContext";
 import { Shell } from "./components/layout/Shell";
 import { Home } from "./pages/Home";
 import { Favorites } from "./pages/Favorites";
@@ -18,8 +19,9 @@ import { ScenarioCompare } from "./pages/tools/ScenarioCompare";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <CalculationHistoryProvider>
+      <BrowserRouter>
+        <Routes>
         <Route path="/" element={<Shell />}>
           <Route index element={<Home />} />
           <Route path="favorites" element={<Favorites />} />
@@ -36,5 +38,6 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </CalculationHistoryProvider>
   );
 }

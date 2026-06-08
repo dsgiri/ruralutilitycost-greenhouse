@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Flame, Info } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { useCalculationHistory } from "@/context/CalculationHistoryContext";
 
 export function HeatingCalculator() {
-  const [area, setArea] = useState<number>(3000);
-  const [deltaT, setDeltaT] = useState<number>(40); // Temp difference
-  const [coverType, setCoverType] = useState<string>("double_poly");
-  const [fuelType, setFuelType] = useState<string>("natural_gas");
-  const [fuelPrice, setFuelPrice] = useState<number>(1.20); // per therm or gallon
+  const [area, setArea] = useCalculationHistory<number>("heatingCalc", "area", 3000);
+  const [deltaT, setDeltaT] = useCalculationHistory<number>("heatingCalc", "deltaT", 40); // Temp difference
+  const [coverType, setCoverType] = useCalculationHistory<string>("heatingCalc", "coverType", "double_poly");
+  const [fuelType, setFuelType] = useCalculationHistory<string>("heatingCalc", "fuelType", "natural_gas");
+  const [fuelPrice, setFuelPrice] = useCalculationHistory<number>("heatingCalc", "fuelPrice", 1.20); // per therm or gallon
 
   // U-values (BTU/hr-sqft-degF)
   const U_VALUES: Record<string, number> = {

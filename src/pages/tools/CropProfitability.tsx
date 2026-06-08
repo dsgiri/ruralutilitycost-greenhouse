@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Leaf, DollarSign } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+import { useCalculationHistory } from "@/context/CalculationHistoryContext";
 
 type CropConfig = {
   id: string;
@@ -17,7 +18,7 @@ const DEFAULT_CROPS: CropConfig[] = [
 ];
 
 export function CropProfitability() {
-  const [crops, setCrops] = useState<CropConfig[]>(DEFAULT_CROPS);
+  const [crops, setCrops] = useCalculationHistory<CropConfig[]>("cropProfit", "crops", DEFAULT_CROPS);
 
   const updateCrop = (id: string, field: keyof CropConfig, value: number | string) => {
     setCrops(crops.map(c => c.id === id ? { ...c, [field]: value } : c));

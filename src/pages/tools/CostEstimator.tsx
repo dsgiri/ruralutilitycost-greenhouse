@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { GREENHOUSE_TYPES, GreenhouseType } from "@/types";
 import { Calculator, DollarSign, Sprout } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
+import { useCalculationHistory } from "@/context/CalculationHistoryContext";
 
 const TYPE_BASE_COST_PSF: Record<GreenhouseType, number> = {
   glass: 35.0,
@@ -16,10 +17,10 @@ const TYPE_BASE_COST_PSF: Record<GreenhouseType, number> = {
 const COLORS = ["#0f172a", "#334155", "#64748b", "#94a3b8", "#cbd5e1"];
 
 export function CostEstimator() {
-  const [area, setArea] = useState<number>(3000);
-  const [type, setType] = useState<GreenhouseType>("poly");
-  const [sitePrepCost, setSitePrepCost] = useState<number>(5000);
-  const [automationLevel, setAutomationLevel] = useState<"low" | "medium" | "high">("medium");
+  const [area, setArea] = useCalculationHistory<number>("costEstimator", "area", 3000);
+  const [type, setType] = useCalculationHistory<GreenhouseType>("costEstimator", "type", "poly");
+  const [sitePrepCost, setSitePrepCost] = useCalculationHistory<number>("costEstimator", "sitePrepCost", 5000);
+  const [automationLevel, setAutomationLevel] = useCalculationHistory<"low" | "medium" | "high">("costEstimator", "automationLevel", "medium");
 
   const baseCost = area * TYPE_BASE_COST_PSF[type];
   
