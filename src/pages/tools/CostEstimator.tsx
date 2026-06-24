@@ -45,7 +45,7 @@ export function CostEstimator() {
     <div className="max-w-6xl mx-auto space-y-8">
       <SEO 
         title="Greenhouse Startup Cost Calculator" 
-        description="Estimate initial build and setup capital expenditures (CapEx) for your greenhouse operations." 
+        description="Estimate initial build and setup capital expenditures (CapEx) with our Greenhouse Startup Cost Calculator. Make evidence-based decisions for your controlled-environment agriculture operations." 
         canonicalUrl="https://greenhouse.ruralutilitycost.com/estimate" 
       />
       <div>

@@ -55,7 +55,7 @@ export function HeatingCalculator() {
     <div className="max-w-6xl mx-auto space-y-8">
       <SEO 
         title="Greenhouse Heating Cost Calculator" 
-        description="Forecast peak heating loads and estimate monthly fuel expenses for your greenhouse." 
+        description="Estimate monthly fuel expenses with our Greenhouse Heating Cost Calculator. Make evidence-based decisions for your controlled-environment agriculture operations." 
         canonicalUrl="https://greenhouse.ruralutilitycost.com/heating" 
       />
       <div>

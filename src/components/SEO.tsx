@@ -8,7 +8,11 @@ interface SEOProps {
 }
 
 export function SEO({ title, description, canonicalUrl }: SEOProps) {
-  const fullTitle = `${title} - Optimized for search`;
+  const fullTitle = title.includes("Rural Utility Cost") 
+    ? title 
+    : title === "Greenhouse Economics & Planning"
+      ? `${title} | Rural Utility Cost`
+      : `${title} | Greenhouse Economics | Rural Utility Cost`;
   
   const structuredData = {
     "@context": "https://schema.org",

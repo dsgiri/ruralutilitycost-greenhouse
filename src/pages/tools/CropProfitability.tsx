@@ -40,7 +40,7 @@ export function CropProfitability() {
     <div className="max-w-6xl mx-auto space-y-8">
       <SEO 
         title="Greenhouse Crop Profitability Calculator" 
-        description="Compare expected revenue and gross margin per square foot for different greenhouse crops." 
+        description="Estimate crop profitability with our Greenhouse Crop Profitability Calculator. Make evidence-based decisions for your controlled-environment agriculture operations." 
         canonicalUrl="https://greenhouse.ruralutilitycost.com/crops" 
       />
       <div>

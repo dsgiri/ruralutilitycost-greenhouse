@@ -46,7 +46,7 @@ export function ScenarioCompare() {
     <div className="max-w-6xl mx-auto space-y-8">
       <SEO 
         title="Greenhouse Scenario Comparison Grid" 
-        description="Compare capital intensity, margins, and payback of different greenhouse setups." 
+        description="Estimate operational differences with our Greenhouse Scenario Comparison Grid. Make evidence-based decisions for your controlled-environment agriculture operations." 
         canonicalUrl="https://greenhouse.ruralutilitycost.com/compare" 
       />
       <div>

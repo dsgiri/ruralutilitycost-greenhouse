@@ -29,7 +29,7 @@ export function ROICalculator() {
     <div className="max-w-6xl mx-auto space-y-8">
       <SEO 
         title="Greenhouse ROI & Payback Calculator" 
-        description="Determine how long it takes to recover capital and estimate 5-year return on greenhouse investments." 
+        description="Estimate return on investment with our Greenhouse ROI & Payback Calculator. Make evidence-based decisions for your controlled-environment agriculture operations." 
         canonicalUrl="https://greenhouse.ruralutilitycost.com/roi" 
       />
       <div>
