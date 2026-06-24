@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Greenhouse Economics & Planning Hub
 
-# Run and deploy your AI Studio app
+## Project Overview
+Greenhouse is the controlled-environment agriculture economics and operations hub built for the Rural Utility Cost ecosystem. The platform empowers greenhouse growers, vegetable producers, agricultural investors, and CEA planners to make evidence-based decisions through precise estimation of setup costs, heating expenses, crop profitability, and return on investment.
 
-This contains everything you need to run your app locally.
+**GitHub Repository:** [https://github.com/dsgiri/ruralutilitycost-greenhouse](https://github.com/dsgiri/ruralutilitycost-greenhouse)
+**Website:** [https://greenhouse.ruralutilitycost.com/](https://greenhouse.ruralutilitycost.com/)
 
-View your app in AI Studio: https://ai.studio/apps/5bbf2198-87b1-4d14-9b40-55e0c6c34924
+## Features
+- **Greenhouse Cost Estimator:** Calculate initial build and setup capital expenditures (CapEx) based on structural materials and level of automation.
+- **Heating & Energy Calculator:** Forecast peak heating loads and estimate monthly fuel expenses using location-specific parameters.
+- **Crop Profitability Comparison:** Model expected revenue and gross margin per square foot for different crop profiles.
+- **ROI & Payback Calculator:** Determine the break-even timeline and estimate a 5-year return on capital investments.
+- **Scenario Comparison Grid:** Evaluate the capital intensity and margins of varying operational setups side by side.
+- **Favorites System:** Save and easily access frequently used calculators and tools.
 
-## Run Locally
+## Technical Stack
+- **Framework:** React 18+ with Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS (Mobile-first, fully responsive)
+- **Routing:** React Router v6
+- **Data Visualization:** Recharts
+- **SEO & Head Management:** React Helmet Async
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Development Guidelines
+- All code must adhere to strict mobile-first responsive design principles.
+- Avoid horizontal scrolling at all screen sizes (tested down to 320px).
+- Maintain SEO best practices (schema.org structured data, meta descriptions, canonical URLs).
+- Optimize for web performance and accessibility (WCAG 2.1 compliance).

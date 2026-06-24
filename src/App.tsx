@@ -13,8 +13,6 @@ import { CookieBanner } from "./components/CookieBanner";
 const Home = React.lazy(() => import("./pages/Home").then(module => ({ default: module.Home })));
 const Favorites = React.lazy(() => import("./pages/Favorites").then(module => ({ default: module.Favorites })));
 const About = React.lazy(() => import("./pages/About").then(module => ({ default: module.About })));
-const Contact = React.lazy(() => import("./pages/Contact").then(module => ({ default: module.Contact })));
-const Legal = React.lazy(() => import("./pages/Legal").then(module => ({ default: module.Legal })));
 const CostEstimator = React.lazy(() => import("./pages/tools/CostEstimator").then(module => ({ default: module.CostEstimator })));
 const HeatingCalculator = React.lazy(() => import("./pages/tools/HeatingCalculator").then(module => ({ default: module.HeatingCalculator })));
 const ROICalculator = React.lazy(() => import("./pages/tools/ROICalculator").then(module => ({ default: module.ROICalculator })));
@@ -57,8 +55,6 @@ export default function App() {
                 <Route index element={<Home />} />
                 <Route path="favorites" element={<Favorites />} />
                 <Route path="about" element={<About />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="legal" element={<Legal />} />
                 
                 {/* Tools */}
                 <Route path="estimate" element={<CostEstimator />} />

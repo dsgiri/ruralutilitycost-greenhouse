@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { Sprout, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { AdContainer } from "@/components/AdContainer";
 
 export function Shell() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -101,13 +100,7 @@ export function Shell() {
 
       {/* Main Content */}
       <main id="main-content" className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 focus:outline-none" tabIndex={-1}>
-        <div className="hidden md:block mb-8">
-          <AdContainer slotId="HEADER_SLOT_ID" className="max-w-[970px] max-h-[90px] min-h-[90px] mx-auto hidden lg:flex" />
-        </div>
         <Outlet />
-        <div className="mt-12">
-          <AdContainer slotId="FOOTER_SLOT_ID" className="max-w-[728px] max-h-[90px] min-h-[90px] mx-auto hidden md:flex" />
-        </div>
       </main>
 
       {/* Footer */}
@@ -142,9 +135,11 @@ export function Shell() {
               <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Information</h3>
               <ul className="space-y-3 text-sm">
                 <li><Link to="/about" className="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white p-1 -ml-1 rounded">About Greenhouse</Link></li>
-                <li><Link to="/contact" className="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white p-1 -ml-1 rounded">Contact</Link></li>
-                <li><Link to="/legal" className="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white p-1 -ml-1 rounded">Legal & Disclaimer</Link></li>
-                <li><a href="https://github.com" className="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white p-1 -ml-1 rounded">GitHub</a></li>
+                <li><a href="https://www.ruralutilitycost.com/contact" className="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white p-1 -ml-1 rounded">Contact</a></li>
+                <li><a href="https://www.ruralutilitycost.com/privacy-policy" className="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white p-1 -ml-1 rounded">Privacy Policy</a></li>
+                <li><a href="https://www.ruralutilitycost.com/terms-of-use" className="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white p-1 -ml-1 rounded">Terms of Use</a></li>
+                <li><a href="https://www.ruralutilitycost.com/disclaimer" className="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white p-1 -ml-1 rounded">Disclaimer</a></li>
+                <li><a href="https://github.com/dsgiri/ruralutilitycost-greenhouse" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white p-1 -ml-1 rounded">GitHub</a></li>
               </ul>
             </nav>
           </div>

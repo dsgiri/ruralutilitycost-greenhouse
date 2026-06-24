@@ -1,6 +1,5 @@
 import React from "react";
 import { SEO } from "@/components/SEO";
-import { AdContainer } from "@/components/AdContainer";
 
 export function About() {
   return (
@@ -20,8 +19,6 @@ export function About() {
         <p>
           We help greenhouse growers, numerical farm managers, and CEA planners estimate costs, profit, energy usage, ROI, and payback periods for controlled-environment agriculture and greenhouse systems.
         </p>
-        
-        <AdContainer slotId="IN_CONTENT_SLOT_ID" className="my-8" />
         
         <p>
           The goal of this platform is to help users make practical investment and operating decisions with clear, data-driven tools that are fast and easy to use. Whether you are planning a small hoop house or a massive glass greenhouse facility, understanding your startup costs, heating requirements, and crop profitability is essential.
